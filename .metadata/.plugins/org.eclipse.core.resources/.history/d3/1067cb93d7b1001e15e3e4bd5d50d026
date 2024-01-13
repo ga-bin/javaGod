@@ -1,0 +1,9 @@
+package javaGod.d.lang;
+
+public class JavaLangSystem {
+
+	public static void main(String[] args) {
+		JavaLangSystem sample = new JavaLangSystem();
+		sample.systemPropertiesCheck();
+	}
+}
