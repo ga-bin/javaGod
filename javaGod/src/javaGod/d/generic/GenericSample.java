@@ -9,6 +9,7 @@ public class GenericSample {
     CastingDTO castingDTO = new CastingDTO();
     castingDTO.setObject(new StringBuffer());
     sample.checkDTO(castingDTO);
+    sample.checkGenericDTO();
   }
 
   private void checkCastingDTO() {
@@ -28,8 +29,20 @@ public class GenericSample {
       System.out.println("StrinbBuilder");
     } else if(tempObject instanceof StringBuffer) {
       System.out.println("StringBuffer");
-    }
+    }    
+  }
+  
+  public void checkGenericDTO() {
+    CastingGenericDTO<String> dto1 = new CastingGenericDTO<>();
+    dto1.setObject(new String());
+    CastingGenericDTO<StringBuffer> dto2 = new CastingGenericDTO<>();
+    dto2.setObject(new StringBuffer());
+    CastingGenericDTO<StringBuilder> dto3 = new CastingGenericDTO<>();
+    dto3.setObject(new StringBuilder());
 
+    String temp1 = dto1.getObject();
+    StringBuffer temp2 = dto2.getObject();
+    StringBuilder temp3 = dto3.getObject();
   }
 
   
